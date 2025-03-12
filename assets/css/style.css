@@ -1,0 +1,400 @@
+/*
+Project         :  Haramain Analytics
+Version         :  0.1
+Author          :  
+Developer       :  Kareem Sultan (HTML-CSS)
+Framework       :  Bootstrap 5
+Date            :  11/03/2024      
+*/
+
+/* ============================================ *
+
+ * Contents
+
+ 1- ROOT
+ 2- FONT
+ 3- BODY
+ 4- CONTAINER
+ 5- FRAMEWORK
+ 6- NAVBAR
+ 7- SECTION  
+
+ * ============================================ */
+
+/* ============================================ *
+ * ROOT
+ * ============================================ */
+
+:root {
+  --primary: #44D2A8;
+  --main-color: #393939;
+  --main-bg: #F6F6F6;
+  --secondary: #737373;
+  --white: #F7FBFE;
+  --main-linear-gradient: linear-gradient(104.16deg, #EAD8B8 -5.61%, #F9F5EC 87.79%);
+  --border: #E5E5E5;
+  --danger: #E2507A;
+  --yellow: #FFC042;
+  --blue: #3354F4
+}
+
+/* ============================================ *
+ * FONT
+ * ============================================ */
+
+/* .fs12 {
+  font-size: 0.75rem;
+}
+
+.fs14 {
+  font-size: 0.875rem;
+}
+
+.fs16 {
+  font-size: 1rem;
+}
+
+.fs18 {
+  font-size: 1.125rem;
+}
+
+.fs24 {
+  font-size: 1.5rem;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+   */
+.text_primary {
+  color: var(--primary);
+}
+
+.text_danger {
+  color: var(--danger);
+}
+
+.bg_blue {
+  background-color: var(--blue);
+}
+
+.bg_yellow {
+  background-color: var(--yellow);
+}
+
+.bg_primary {
+  background-color: var(--primary);
+}
+
+
+body {
+  font: 400 1rem/1.35 "IBM Plex Sans Arabic", sans-serif;
+  color: var(--main-color);
+  background-color: var(--main-bg);
+}
+
+body[data-aos-delay='3300'] [data-aos],
+[data-aos][data-aos][data-aos-delay='3300'] {
+  transition-delay: 3.3s;
+}
+body[data-aos-delay='4000'] [data-aos],
+[data-aos][data-aos][data-aos-delay='4000'] {
+  transition-delay: 4s;
+}
+
+body[data-aos-delay='4700'] [data-aos],
+[data-aos][data-aos][data-aos-delay='4700'] {
+  transition-delay: 4.7s;
+}
+
+body[data-aos-delay='5500'] [data-aos],
+[data-aos][data-aos][data-aos-delay='5500'] {
+  transition-delay: 5.5s;
+}
+body[data-aos-delay='6200'] [data-aos],
+[data-aos][data-aos][data-aos-delay='6200'] {
+  transition-delay: 6.2s;
+}
+
+/* ============================================ *
+ * LOADER
+ * ============================================ */
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1031;
+}
+
+.loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  background: url(../img/haramain-door.jfif) center center, #EAD8B8;
+  background-size: contain;
+  width: 50%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.loader-wrapper .loader-section.section-left {
+  left: 0
+}
+
+.loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+/* Loaded Styles */
+.loaded .loader-wrapper .loader-section.section-left {
+  transform: translateX(-100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded .loader-wrapper .loader-section.section-right {
+  transform: translateX(100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loader {
+  position: relative;
+  z-index: 1031;
+  display: inline-block;
+  transition: all 1s ease-in;
+}
+
+.loaded .loader {
+  opacity: 0;
+}
+
+.loaded .loader-wrapper {
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all .3s 1s ease-out;
+}
+
+
+
+
+/* ============================================ *
+  * CONTAINER
+  * ============================================ */
+
+@media (min-width: 1920px) {
+
+  .container-xl {
+    max-width: 1720px;
+  }
+}
+
+.container-xl {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* ============================================ *
+  * NAVBAR
+  * ============================================ */
+
+.navbar {
+  padding: 0.825rem 1.375rem;
+  backdrop-filter: blur(10px);
+  background: var(--main-linear-gradient);
+  border-radius: 0.625rem;
+  margin-top: 1.25rem;
+  border: 1px solid var(--border);
+}
+
+/* ============================================ *
+  * SECTION
+  * ============================================ */
+
+.section {
+  overflow: hidden;
+  margin-top: 2.5rem;
+}
+
+.section_main_title h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.circle {
+  display: inline-block;
+  width: 13px;
+  min-width: 13px;
+  max-width: 13px;
+  height: 13px;
+  min-height: 13px;
+  max-height: 13px;
+  border-radius: 50%;
+}
+
+.circle_text_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ============================================ *
+  * CARD
+  * ============================================ */
+
+.section.visits {
+  margin-top: 2rem;
+}
+
+.main_card_wrapper {
+  padding: 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: 1.125rem;
+  background: url(../img/visitors-bg.svg) no-repeat, var(--main-linear-gradient);
+  background-position: -40%;
+  background-size: contain;
+}
+
+.visits_card {}
+
+.card_header {
+  font-size: 1.375rem;
+  color: var(--secondary);
+  padding: 0.875rem 0.625rem 1rem 0.625rem;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.card_body {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 1.125rem;
+  background-color: var(--white);
+}
+
+.main_header_title {
+  font-size: 2.75rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  line-height: 100%;
+  padding-bottom: .5rem;
+}
+
+.visits_container {
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.visits_container>.main_card_wrapper {
+  width: calc(20% - 2.5rem);
+}
+
+footer {
+  margin-top: 50px;
+}
+
+.footer_logo_wrapper {
+  text-align: center;
+  position: relative;
+}
+
+.footer_line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(40, 40, 40, 0.1);
+  top: 50%;
+}
+
+.footer_logo_img {
+  background-color: var(--main-bg);
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1600px) {
+
+  .main_header_title {
+    font-size: 1.7rem;
+  }
+
+  .card_header {
+    font-size: 1rem;
+  }
+
+  .visits_container>.main_card_wrapper {
+    width: calc(20% - 1.5rem);
+  }
+
+}
+
+@media (max-width: 1400px) {
+
+  .visits_container {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.25rem;
+  }
+
+  .visits_container>.main_card_wrapper {
+    width: calc(100% / 3 - 1.5rem);
+  }
+}
+
+@media (max-width: 860px) {
+  .visits_container {
+    justify-content: start;
+  }
+
+  .visits_container>.main_card_wrapper {
+    width: calc(100% / 2 - 1.5rem);
+  }
+
+  .section_main_title h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 575px) {
+
+  .visits_container>.main_card_wrapper {
+    width: 100%;
+  }
+
+  .footer_logo_img {
+    max-width: 200px;
+  }
+
+  footer {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}

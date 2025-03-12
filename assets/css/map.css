@@ -1,0 +1,119 @@
+/* Map Container */
+#map {
+    position: relative;
+    background-color: #a8d5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    touch-action: none; /* Prevents default touch behaviors */
+}
+
+/* Map Elements */
+.country {
+    transition: fill 0.2s;
+    vector-effect: non-scaling-stroke; /* Maintains stroke width during zoom */
+}
+
+.country:hover {
+    fill: #b2dfb2;
+    cursor: pointer;
+}
+
+/* Labels */
+.map-label {
+    font-family: Arial, sans-serif;
+    pointer-events: none;
+    user-select: none;
+}
+
+.ocean-label {
+    fill: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    font-size: 14px;
+}
+
+.continent-label {
+    fill: rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+
+/* Bubbles */
+.data-bubble {
+    transition: all 0.2s ease;
+}
+
+.data-bubble:hover {
+    stroke: white;
+    stroke-width: 2px;
+}
+
+/* Tooltip */
+.map-tooltip {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    z-index: 1000;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.map-tooltip .country-name {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* Zoom Controls */
+.zoom-controls {
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+.zoom-controls rect {
+    fill: white;
+    stroke: #ccc;
+    stroke-width: 1;
+    opacity: 0.9;
+}
+
+.zoom-controls g:hover rect {
+    fill: #f8f9fa;
+    stroke: #aaa;
+}
+
+.zoom-controls text {
+    user-select: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Loading State */
+.map-loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Error State */
+.map-error {
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* SVG base styles */
+svg {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .zoom-controls {
+        transform: scale(0.8);
+    }
+    
+    .map-label {
+        font-size: 12px;
+    }
+}
