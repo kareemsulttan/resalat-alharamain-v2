@@ -42,30 +42,10 @@ Date            :  11/03/2024
  * FONT
  * ============================================ */
 
-/* .fs12 {
-  font-size: 0.75rem;
-}
-
 .fs14 {
   font-size: 0.875rem;
 }
 
-.fs16 {
-  font-size: 1rem;
-}
-
-.fs18 {
-  font-size: 1.125rem;
-}
-
-.fs24 {
-  font-size: 1.5rem;
-}
-
-.fw600 {
-  font-weight: 600;
-}
-   */
 .text_primary {
   color: var(--primary);
 }
@@ -87,19 +67,71 @@ Date            :  11/03/2024
 }
 
 
+.btn,
+.btn-check:active+.btn:focus,
+.btn-check:checked+.btn:focus,
+.btn.active:focus,
+.btn:active:focus,
+.btn-check:focus+.btn,
+.btn:focus,
+.btn:focus,
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn:active:focus,
+.form-control,
+.form-control:focus,
+.form-check-input:focus,
+.form-control.is-valid,
+.form-control.is-valid:focus {
+  box-shadow: none !important;
+  border: none;
+  color: inherit;
+}
+
+.nav-link.btn {
+  color: var(--main-color);
+  transition: all .5s ease;
+  background: linear-gradient(0deg, #2d6555 1.67%, #aa8d2f 100%);
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  font-weight: 500;
+  border: none !important;
+  border-radius: 0.25rem !important;
+}
+
+.btn_inner_bg {
+  background-color: #f7f2e6;
+  transition: all .3s ease;
+  padding: 0 0.75rem;
+  line-height: 36px;
+  height: 36px;
+  color: #145543;
+}
+
+
+.btn:hover .btn_inner_bg,
+.btn.active .btn_inner_bg {
+  color: #f7f2e6;
+  background: transparent;
+}
+
+
 body {
   font: 400 1rem/1.35 "IBM Plex Sans Arabic", sans-serif;
   color: var(--main-color);
   background-color: var(--main-bg);
 }
 
-body[data-aos-delay='3300'] [data-aos],
-[data-aos][data-aos][data-aos-delay='3300'] {
-  transition-delay: 3.3s;
+body[data-aos-delay='3400'] [data-aos],
+[data-aos][data-aos][data-aos-delay='3400'] {
+  transition-delay: 3.4s;
 }
-body[data-aos-delay='4000'] [data-aos],
-[data-aos][data-aos][data-aos-delay='4000'] {
-  transition-delay: 4s;
+
+body[data-aos-delay='4200'] [data-aos],
+[data-aos][data-aos][data-aos-delay='4200'] {
+  transition-delay: 4.2s;
 }
 
 body[data-aos-delay='4700'] [data-aos],
@@ -107,13 +139,35 @@ body[data-aos-delay='4700'] [data-aos],
   transition-delay: 4.7s;
 }
 
-body[data-aos-delay='5500'] [data-aos],
-[data-aos][data-aos][data-aos-delay='5500'] {
-  transition-delay: 5.5s;
+body[data-aos-delay='5000'] [data-aos],
+[data-aos][data-aos][data-aos-delay='5000'] {
+  transition-delay: 5s;
 }
-body[data-aos-delay='6200'] [data-aos],
-[data-aos][data-aos][data-aos-delay='6200'] {
-  transition-delay: 6.2s;
+
+body[data-aos-delay='5100'] [data-aos],
+[data-aos][data-aos][data-aos-delay='5100'] {
+  transition-delay: 5.1s;
+}
+
+body[data-aos-delay='5300'] [data-aos],
+[data-aos][data-aos][data-aos-delay='5300'] {
+  transition-delay: 5.3s;
+}
+
+body[data-aos-delay='6000'] [data-aos],
+[data-aos][data-aos][data-aos-delay='6000'] {
+  transition-delay: 6s;
+}
+
+
+body[data-aos-delay='5800'] [data-aos],
+[data-aos][data-aos][data-aos-delay='5800'] {
+  transition-delay: 5.8s;
+}
+
+body[data-aos-delay='6400'] [data-aos],
+[data-aos][data-aos][data-aos-delay='6400'] {
+  transition-delay: 6.4s;
 }
 
 /* ============================================ *
@@ -132,7 +186,7 @@ body[data-aos-delay='6200'] [data-aos],
 .loader-wrapper .loader-section {
   position: fixed;
   top: 0;
-  background: url(../img/haramain-door.jfif) center center, #EAD8B8;
+  background: url(../img/haramain-door.svg) center center, #EAD8B8;
   background-size: contain;
   width: 50%;
   height: 100%;
@@ -176,16 +230,14 @@ body[data-aos-delay='6200'] [data-aos],
 }
 
 
-
-
 /* ============================================ *
   * CONTAINER
   * ============================================ */
 
-@media (min-width: 1920px) {
+@media (min-width: 1400px) {
 
   .container-xl {
-    max-width: 1720px;
+    max-width: 94%;
   }
 }
 
@@ -207,6 +259,12 @@ body[data-aos-delay='6200'] [data-aos],
   border: 1px solid var(--border);
 }
 
+
+img[src*="main-logo"] {
+  max-width: 120px;
+}
+
+
 /* ============================================ *
   * SECTION
   * ============================================ */
@@ -218,7 +276,7 @@ body[data-aos-delay='6200'] [data-aos],
 
 .section_main_title h1 {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 0;
 }
 
@@ -251,12 +309,17 @@ body[data-aos-delay='6200'] [data-aos],
   padding: 0.625rem;
   border: 1px solid var(--border);
   border-radius: 1.125rem;
-  background: url(../img/visitors-bg.svg) no-repeat, var(--main-linear-gradient);
-  background-position: -40%;
-  background-size: contain;
+  background: var(--main-linear-gradient);
+  position: relative;
+  overflow: hidden;
 }
 
-.visits_card {}
+.card_bg {
+  width: 66%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .card_header {
   font-size: 1.375rem;
@@ -271,6 +334,7 @@ body[data-aos-delay='6200'] [data-aos],
   border: 1px solid var(--border);
   border-radius: 1.125rem;
   background-color: var(--white);
+  position: relative;
 }
 
 .main_header_title {
@@ -278,16 +342,26 @@ body[data-aos-delay='6200'] [data-aos],
   font-weight: 600;
   margin-bottom: 0;
   line-height: 100%;
-  padding-bottom: .5rem;
 }
 
 .visits_container {
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+
+.visits_card .card_header {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding-top: .2rem;
+}
+
+.visits_card .card_body {
+  padding: 2.375rem 0.937rem 1.625rem 0.937rem;
 }
 
 .visits_container>.main_card_wrapper {
-  width: calc(20% - 2.5rem);
+  width: calc(20% - 2.2rem);
 }
 
 footer {
@@ -312,6 +386,10 @@ footer {
   position: relative;
 }
 
+#countries_chart,
+#lang_chart {
+  height: 19.8vw;
+}
 
 
 
@@ -383,6 +461,14 @@ footer {
   }
 }
 
+@media (max-width: 767px) {
+  .btns {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #7b7e3d;
+  }
+}
+
 @media (max-width: 575px) {
 
   .visits_container>.main_card_wrapper {
@@ -396,5 +482,16 @@ footer {
   footer {
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    padding: 0.825rem 1rem;
+  }
+
+  .btn_inner_bg {
+    font-size: .9rem;
+    font-weight: 500;
   }
 }
